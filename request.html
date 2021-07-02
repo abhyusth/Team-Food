@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Form</title>
+    <link href="./images/iconnew.png" rel="icon">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="form.css" rel="stylesheet">
+</head>
+<body>
+    <header class="row" id="navbar">
+            <div class="col-4">
+           <a href="./index.html"><img src="./images/newlogo.png" class="img-fluid" id="logo" alt="Team Food" draggable="false"></a>
+        </div>
+            <div class="col-8">
+            <nav id="navigate">
+                <ul>
+                    <li><a href="./about.html" target="_self">ABOUT US</a></li>
+                    <li><a href="./gallery.html" target="_self">OUR WORK</a></li>
+                    <li><a href="./contact.html" target="_self">CONTACT US</a></li>
+                    <li><a href="./SignIn and Signup/sign.html" target="_self">VOLUNTEER LOGIN</a></li>
+                 </ul>
+                 </nav>
+                </div>
+        </header>
+    <h2 align="center">REQUEST FORM</h2>
+    <form class="container" id="requestForm">
+        <div class="alert">Your request has been submitted</div>
+        <fieldset>
+            <legend>Family Details</legend>
+            <hr>
+            <p class="row">
+                <label class="col-4">Family Member</label>
+                <input  class="col"  placeholder="Name" type="text" name="name" id="name">   
+            </p>
+            <p class="row">
+                <label class="col-4">Age</label>
+                <input placeholder="Age" class="col" type="number" name="age" id="age">
+            </p>
+        </p>
+        <p class="row">
+        <label class="col-4" >Gender</label>
+        <input  type="radio"   id="male" name="Gender" value="Male" ><span>Male</span>
+        <input  type="radio"   id="female" name="Gender" value="Female" style="margin-left: 15px;"><span>Female</span>
+        <input  type="radio"   id="other" name="Gender" value="Other" style="margin-left: 15px;"><span>Other</span>
+    </p>
+    <p class="row">
+        <label class="col-4">Occupation</label>
+        <input   placeholder="Occupation" class="col" type="text" name="occupation" id="occupation">
+    </p>
+            <button class="btn btn-primary" id="addBtn" name="button" type="submit" 
+            value="submit" onclick="addMember()">Add Member +</button>
+            <table class="row" id="memberList">
+                <tr>
+                    <th>Member name</th>
+                    <th>Age</th>
+                        <th>Gender</th>
+                        <th>Occupation</th>
+                </tr>
+                <div class="container" id="tableData">
+                <br>
+            </div>
+        </table>             
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Other Details:</legend>
+        <hr>
+            <p class="row">
+            <label class="col-4">Date Of Request</label>
+            <input   class="col" type="date" name="date" id="date" required>
+        </p>
+            <p class="row">
+            <label class="col-4">Ration Card</label>
+            <input type="radio" name="rationCard" value="Yes"><span>Yes</span>
+            <input type="radio" name="rationCard" value="No" style="margin-left: 15px;"><span>No</span>
+        </p>
+        <p class="row">
+            <label class="col-4">Address</label>
+            <input  class="col" type="text" placeholder="Address" name="address" id="address" required>
+        </p>
+        <p class="row">
+            <label class="col-4">Contact No.</label>
+            <input  class="col" type="text" placeholder="Contact Number" name="contactNo" id="contactNo" maxlength="10">
+        </p>
+    </fieldset> 
+    
+    <p class="row">
+        <button class="btn btn-primary" id="submitbtn" type="submit" value="submit" onSubmit="submitForm(event)">SUBMIT</button>
+        <button class="btn btn-primary" id="resetbtn" type="reset" value="reset" onclick="resetForm()" style="margin-left: 30px;">RESET</button>
+    </p>
+    </form>
+    <br><br>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script src="firebase.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>

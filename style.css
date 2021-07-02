@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Okra,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#navigate a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Okra,Helvetica,sans-serif;
+}
+nav{
+    float: right;
+    padding: 20px;
+  }
+nav ul li{
+    display:inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+}
+a:any-link
+{
+    color: #28282B;
+} 
+a:hover{
+    color: rgb(237,90,104);
+}
+p{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    justify-content: space-between;
+}
+#logo{
+    width:50x;
+    cursor: pointer;
+}
+.menu-icon{
+    width:60px;
+    height: 55px;
+    padding: 20px 20px 0 0;
+    cursor: pointer;
+    display: none;
+}
+.navL
+{
+    height: 80vh;
+    width:100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url(./images/background1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    background-position: center;
+}
+#leftHead{
+    font-size: 25px;
+    font-weight: 650;
+    margin-top: 50px;
+    font-family: Okra,Helvetica,sans-serif;
+    color: white;
+    padding-left: 30px;
+}
+#leftPassage{
+    padding-left: 30px;
+}
+.leftQuote{
+    margin-top: 40px;
+}
+#donate{
+    width: 180px;
+    padding: 12px 10px;
+    border: 0;
+    outline: none;
+    color: white;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    border-radius: 10px;
+    cursor: pointer;
+   font-size: 20px;
+    transition: width 0.5s;    
+}
+#donate img{
+    width: 50px;
+    display: none;
+}
+#donate:hover img{
+    display: block;
+}
+#donate:hover{
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navL button{
+    margin-left: 35px;
+}
+.oldLogo{
+    width: 40%;
+    height: 35%; 
+    position:initial;   
+    float: right;
+    margin-top: 80px;
+    z-index: 2;
+}
+.navR{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),url(./images/background2.jpg);
+    background-repeat: no-repeat;
+    filter: grayscale(20);
+    background-size: cover;
+    border: 1px solid white;
+    background-position: bottom;
+    color: white;
+    padding: 80px;
+}
+.navR span{
+    color:white;
+    font-family: Arial Rounded MT Bold;
+    font-size: 4rem;
+}
+#eradicate{
+    color:white;
+    font-family: Arial Rounded MT Bold;
+    font-size: 2.5rem;
+}
+.describe{
+    padding: 20px;
+    background-color: #e3e4e3;
+    border-radius: 8px;
+    width: 100%;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    font-family: Okra,Helvetica,sans-serif;
+}
+.describe span{
+    font-size: 30px;
+    color:#28282B;
+}
+.describe p{
+    font-size: 20px;
+    color: #777672;
+}
+.fab.fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+#instaHead{
+    font-size: 30px;
+    padding:20px;
+    border-radius: 10px;
+    color:#28282B;
+    font-weight: 600;
+    background-color: #e3e4e3;
+}
+#instafeed-container{
+    align-content: center;
+   padding: 20px;
+   background-color: #e3e4e3;
+   border-radius: 10px;
+   width: 100%;
+    display:inline-block
+}
+#instafeed-container a img{
+    border:5px solid #e3e4e3;
+    width:25%;
+    border-radius: 8px;
+    display:inline-block;
+}
+.social-container{
+    background-color:#e3e4e3;
+    text-align: center;
+    font-family: Arial Rounded MT Bold;
+    border-radius: 10px;
+    padding: 20px;
+    height: 90px;
+    color:#28282B;
+    font-size: 25px;
+}
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+    color:#28282B;
+    background-color: white;
+}
+.social-container a:hover{
+    color: rgb(237,90,104);
+}
+.social-container p{
+    font-size: 15px;
+    width: 50%;
+    color: black;
+    justify-items: center;
+}
+@media only screen and (max-width:768px){
+    #logo{
+        width: 200px;
+    }
+    nav ul{
+        width: 100%;
+        background: linear-gradient(to right, #FF4B2B, #FF416C);
+        top: 75px;
+        right: 0;
+        border-radius: 8px;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a:any-link{
+        color: white;
+    }
+    nav ul li a:hover{
+        color: rgb(237,90,104);
+    }
+    .menu-icon{
+        display: block;
+        padding: 10px;
+        position: relative;
+        display: inline-block;
+    }
+    #menuList{
+        overflow: hidden;
+        transition: 0.5s;
+        position: absolute;
+        z-index: 1;
+    }
+    #leftHead{
+        padding: 0px;
+        font-size: 23px;
+    }
+    #leftPassage{
+        padding: 10px;
+    }
+    .leftQuote{
+        margin-top: 25px;
+    }
+    #donate{
+        width: 145px;
+        padding: 10px 10px;
+        border: 0;
+        outline: none;
+        color: white;
+        background: linear-gradient(to right, #FF4B2B, #FF416C);
+        border-radius: 10px;
+        cursor: pointer;
+       font-size: 18px;
+        transition: width 0.5s;
+    }
+    #donate img{
+        width: 35px;
+        display: none;
+    }
+    #donate:hover img{
+        display: block;
+    }
+    #donate:hover{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navL button{
+        margin-left: 10px;
+    }
+    .oldLogo{
+        width: 45%;
+        height: 35%;       
+    }
+    .navR span{
+        color:white;
+        font-family: Arial Rounded MT Bold;
+        font-size: 45px;
+    }
+    #eradicate{
+        color:white;
+        font-family: Arial Rounded MT Bold;
+        font-size: 28px;
+    }
+    .navR{
+        padding: 35px;
+    }
+    .describe span{
+        font-size: 28px;
+    }
+    .describe p{
+        font-size: 18px;
+    }
+    #instafeed-container{
+        padding:0px;
+    }
+    #instafeed-container a img{
+        width: 32%;
+    }
+    .social-container{
+     padding: 20px;
+    height: 110px;
+    font-size: 20px;
+}
+.social-container p{
+    font-size: 15px;
+    width: 100%;
+    justify-items: center;
+}
+}

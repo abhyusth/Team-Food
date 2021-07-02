@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Food</title>
+    <link href="./images/iconnew.png" rel="icon">
+    <link href="./bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container"> 
+        <header class="row navbar">           
+            <div class="col">
+                <a href="./index.html"><img src="./images/newlogo.png" class="img-fuid" id="logo" alt="Team Food" draggable="false"></a>
+                </div>
+            <nav id="navigate">
+                <ul id="menuList">
+                    <li><a href="./about.html" target="_self">ABOUT US</a></li>
+                    <li><a href="./gallery.html" target="_self">OUR WORK</a></li>
+                    <li><a href="./contact.html" target="_self">CONTACT US</a></li>
+                    <li><a href="./SignIn and Signup/sign.html" target="_self">VOLUNTEER LOGIN</a></li>
+                 </ul>
+                 </nav>
+                 <img class="menu-icon" src="./images/menu.png" onclick="toggleMenu()">               
+                
+        </header>    
+                <div class="row">
+        <div class="col-md-6 navL" data-aos="fade">
+            <section class="leftQuote">
+                <span id="leftHead">YOUR SUPPORT MATTERS</span><br>
+                <p class="col" id="leftPassage">
+                Contribute to help us provide essential food items to those in need
+            </p></section>
+            <br>
+       <a href="https://pages.razorpay.com/pl_HS1ePPT3m0k17Y/view" target="_blank"><button id="donate" type="button">Donate Us<img src="./images/newbutton.png" draggable="false"></button></a>
+               <img class="oldLogo" src="/images/Old Logo.png" alt="Team food logo" data-aos="fade-up" draggable="false">
+    </div>
+        <div class="col-md-6 navR" data-aos="fade">
+                <span>#FeedingJhansi</span><br>
+              <p> We provide raw food material like flour,rice,spices,pulses etc. to
+                undeserved communities.<br>
+                <span id="eradicate">Help Us Eradicate Hunger</span>
+        </p>
+    </div>
+</div>
+<br>
+<div class="row describe" data-aos="fade-up">
+       <p><span>52+ families being served in last 30 days</span>
+        <br>Team Food is a non profit organisation in Jhansi and our mission is to 
+    make Jhansi hunger free.</p>
+</div>
+<br>
+<div id="instaHead" data-aos="fade-up"><i class="fab fa-instagram" style="margin-left: 30px;"></i>
+    Instagram
+    <hr>
+    <div id="instafeed-container">
+    </div>
+</div>
+<hr>
+<div class="row social-container" data-aos="fade-up"> 
+    Follow us at 
+    <a href="#" class="social"><i class="fab fa-facebook-f" style="color: blue;"></i></a>
+	<a href="https://www.instagram.com/teamfoodjhansi/" class="social"><i class="fab fa-instagram"></i></a>
+      <p>Copyright &copy 2021 Team Food<br>All rights reserved</p>
+    </div>
+    <br><br><br><br><br><br>
+</div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+<script>
+    AOS.init({
+        offset: 120,
+        duration: 1000,
+    });
+  </script>
+  <script>
+      var menuList=document.getElementById("menuList");
+      menuList.style.maxHeight="0px";
+      
+      function toggleMenu(){
+          if(menuList.style.maxHeight=="0px")
+          {
+              menuList.style.maxHeight="200px";
+          }
+          else
+          menuList.style.maxHeight="0px";
+      }
+    </script>
+      <script>
+     var userFeed = new Instafeed({
+		get: 'user',
+		target: "instafeed-container",
+    	resolution: 'low_resolution',
+		accessToken: 'IGQVJYX3Q3NXdzN2tpUzRBdlZAEbzZA4QUhhaUlBV01kbHZAPSjNjdDg0MThmOTdEM3JTZAnhxb2lYZADFuZA09PamgwWWljWnJ0dWtTNThMSmtvY0xDa1hvaVdWNzJITy1lXzB6UEZARejlSVmZAvUGx4WFNLOAZDZD',
+	});
+	userFeed.run();
+  </script>
+</body>
+</html> 
